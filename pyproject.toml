@@ -1,0 +1,64 @@
+[project]
+name = "my-app"
+version = "0.1.0"
+description = "My app"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "email@example.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.23.0",
+    "sqlalchemy>=2.0.0",
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.3",
+    "pandas>=3.0.1",
+]
+
+[tool.uv]
+# Секция библиотек для разработчика
+dev-dependencies = [
+    "mypy>=1.19.1",
+    "pytest>=7.0.0",
+    "httpx>=0.24.0",
+    "ruff>=0.1.0",
+]
+
+[tool.uv.sources]
+# Если нужно указать альтернативные источники пакетов
+# my-private-package = { git = "https://github.com/user/private-repo.git" }
+
+[tool.ruff]
+# Максимальная длина строки (стандарт Black)
+line-length = 88
+
+# Какие правила проверять
+select = [
+    "E",   # Ошибки стиля (pycodestyle)
+    "W",   # Предупреждения стиля (pycodestyle)
+    "F",   # Логические ошибки (pyflakes)
+    "I",   # Порядок импортов (isort)
+    "UP",  # Современный синтаксис (pyupgrade)
+]
+
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+]
