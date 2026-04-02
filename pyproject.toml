@@ -31,9 +31,9 @@ dependencies = [
     "pandas>=3.0.1",
 ]
 
-[tool.uv]
+[dependency-groups]
 # Секция библиотек для разработчика
-dev-dependencies = [
+dev = [
     "mypy>=1.19.1",
     "pytest>=7.0.0",
     "httpx>=0.24.0",
