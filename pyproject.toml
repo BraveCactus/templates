@@ -8,13 +8,11 @@ license = {text = "MIT"}
 authors = [
     {name = "Your Name", email = "email@example.com"}
 ]
+
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
@@ -22,39 +20,32 @@ classifiers = [
 ]
 
 dependencies = [
-    "fastapi>=0.100.0",
-    "uvicorn[standard]>=0.23.0",
-    "sqlalchemy>=2.0.0",
-    "ipykernel>=6.29.5",
     "matplotlib>=3.10.8",
     "numpy>=2.4.3",
     "pandas>=3.0.1",
+    #"fastapi>=0.100.0",
+    #"uvicorn[standard]>=0.23.0",
+    #"sqlalchemy>=2.0.0",
+    # "ipykernel>=6.29.5",
 ]
 
 [dependency-groups]
-# Секция библиотек для разработчика
-dev = [
+dev = [    
     "mypy>=1.19.1",
-    "pytest>=7.0.0",
-    "httpx>=0.24.0",
     "ruff>=0.1.0",
+    #"pytest>=7.0.0",
+    #"httpx>=0.24.0",
 ]
 
-[tool.uv.sources]
-# Если нужно указать альтернативные источники пакетов
-# my-private-package = { git = "https://github.com/user/private-repo.git" }
-
 [tool.ruff]
-# Максимальная длина строки (стандарт Black)
 line-length = 88
 
-# Какие правила проверять
 select = [
-    "E",   # Ошибки стиля (pycodestyle)
-    "W",   # Предупреждения стиля (pycodestyle)
-    "F",   # Логические ошибки (pyflakes)
-    "I",   # Порядок импортов (isort)
-    "UP",  # Современный синтаксис (pyupgrade)
+    "E",   
+    "W",   
+    "F",  
+    "I",   
+    "UP",
 ]
 
 exclude = [
