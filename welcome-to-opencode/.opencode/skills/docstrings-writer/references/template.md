@@ -47,7 +47,7 @@ def function_name(param1: Type1, param2: Type2) -> ReturnType:
 async def async_function(param: Type) -> ReturnType:
     """Краткое описание.
 
-    args:
+    params:
         param: Описание.
 
     returns:
